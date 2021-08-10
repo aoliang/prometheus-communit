@@ -1,1 +1,0 @@
-thanos directory copied from github.com/thanos-io/kube-thanos. code style is different from current helm templates, wait to change.

@@ -45,7 +45,7 @@ spec:
         - --log.format=logfmt
         - --query.replica-label=prometheus_replica
         - --query.replica-label=rule_replica
-        - --store=dnssrv+_grpc._tcp.{{ template "kube-prometheus-stack.fullname" . }}-thanos-discovery.default.svc.cluster.local
+        - --store=dnssrv+_grpc._tcp.{{ template "kube-prometheus-stack.fullname" . }}-thanos-discovery.{{ template "kube-prometheus-stack.namespace" . }}.svc.cluster.local
         - --query.timeout=5m
         - --query.lookback-delta=15m
         - --query.auto-downsampling
