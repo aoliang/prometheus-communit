@@ -1593,7 +1593,7 @@ prometheusOperator:
   ##
   thanosImage:
     repository: quay.io/thanos/thanos
-    tag: v0.17.2
+    tag: v0.21.1
     sha: ""
 
   ## Set a Field Selector to filter watched secrets
@@ -2341,7 +2341,10 @@ prometheus:
     ## This is experimental and may change significantly without backward compatibility in any release.
     ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#thanosspec
     ##
-    thanos: {}
+    thanos: {
+      image: quay.io/thanos/thanos:v0.21.1,
+      version: v0.21.1
+    }
 
     ## Containers allows injecting additional containers. This is meant to allow adding an authentication proxy to a Prometheus pod.
     ##  if using proxy extraContainer  update targetPort with proxy container port
