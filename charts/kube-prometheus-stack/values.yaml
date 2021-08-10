@@ -2539,3 +2539,11 @@ prometheus:
     ## https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#podmetricsendpoint
     ##
     # podMetricsEndpoints: []
+thanosQuery:
+  enabled: true
+  replicas: 1
+  labels: {
+    app.kubernetes.io/component: query-layer,
+    app.kubernetes.io/instance: thanos-query,
+    app.kubernetes.io/name: thanos-query
+  }
